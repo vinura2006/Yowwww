@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A special surprise for someone very dear to my heart - My dearest Mindu">
+  <meta name="theme-color" content="#ffd1dc">
+  
+  <!-- Open Graph / Social Share -->
+  <meta property="og:title" content="A Special Surprise for Mindu 💕">
+  <meta property="og:description" content="Something romantic is waiting...">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/heart-pattern.png">
+  
+  <title>💕 My Dearest Mindu 💕</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- No-JS Class Removal -->
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#main" class="sr-only">Skip to main content</a>
+  
+  <!-- Floating Hearts Background -->
+  <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+  
+  <!-- Main Content -->
+  <main id="main" class="intro">
+    <div class="intro__content">
+      <h1 class="intro__greeting">💕 My Dearest Mindu 💕</h1>
+      
+      <div class="intro__message" id="intro-message">
+        <p data-delay="500">I'm so sorry, my love... 😔</p>
+        <p data-delay="1500">I wish I could be with you right now,<br>holding your hand, seeing your beautiful smile 🌹</p>
+        <p data-delay="3000">But you know we're both fighting our own battles,<br>working hard to build a beautiful future 💪✨<br>for us and our families 🏡💖</p>
+        <p data-delay="5000">Life keeps us apart sometimes,<br>but my heart is always with you 💕💕💕</p>
+        <p data-delay="7000">So I created something special... 🎁<br>A little gift from my heart to yours 💝</p>
+        <p data-delay="9000">I hope this brings a smile to your face<br>and reminds you how much you mean to me 🥰</p>
+        <p data-delay="11000" class="intro__question">Are you ready for a surprise? 😊✨</p>
+      </div>
+      
+      <div class="intro__cta" id="intro-cta">
+        <a href="proposal.html" class="btn btn--primary btn--large btn--pulse" id="surprise-btn">
+          ✨ See My Surprise For You, <span class="intro__name">Mindu</span> 💖 ✨
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="intro.html" class="nav__link active" aria-current="page">Home</a>
+    <a href="proposal.html" class="nav__link">Proposal</a>
+    <a href="gallery.html" class="nav__link">Gallery</a>
+    <a href="extras.html" class="nav__link">Extras</a>
+  </nav>
+  
+  <!-- No-JS Fallback -->
+  <noscript>
+    <div style="text-align: center; padding: 2rem;">
+      <h1>💕 For My Dearest Mindu 💕</h1>
+      <p>Please enable JavaScript for the full interactive experience!</p>
+      <p><a href="proposal.html" style="color: #ff4d6d;">Click here to see your surprise! 💖</a></p>
+    </div>
+  </noscript>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize intro page
+    document.addEventListener('DOMContentLoaded', () => {
+      initFloatingHearts();
+      initIntroAnimations();
+    });
+  </script>
+</body>
+</html>

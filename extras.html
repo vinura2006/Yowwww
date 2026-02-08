@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create and share your love - E-card generator and sharing for Mindu">
+    <meta name="theme-color" content="#ffd1dc">
+
+    <title>💌 Create & Share Your Love - For Mindu 💕</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- No-JS Class Removal -->
+    <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+
+<body>
+    <!-- Skip to Content -->
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <!-- Header with Controls -->
+    <header class="header" role="banner">
+        <button class="header__toggle" id="sound-toggle" aria-label="Toggle sound effects" aria-pressed="false">
+            🔇 Sound
+        </button>
+        <button class="header__toggle" id="motion-toggle" aria-label="Toggle reduced motion" aria-pressed="true">
+            ✨ Motion
+        </button>
+    </header>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main id="main" class="extras">
+        <h1 class="extras__title">💌 Create & Share Your Love 💕</h1>
+
+        <!-- E-Card Generator Section -->
+        <section class="extras__section" aria-labelledby="ecard-title">
+            <h2 class="extras__section-title" id="ecard-title">✨ Create a Love Note for Mindu ✨</h2>
+
+            <div class="ecard-generator">
+                <form class="ecard-form" id="ecard-form">
+                    <div class="ecard-form__group">
+                        <label class="ecard-form__label" for="ecard-message">Your Message to Mindu 💕</label>
+                        <textarea class="ecard-form__textarea" id="ecard-message" placeholder="Write something sweet..."
+                            maxlength="200" rows="4">I love you more than words can say! 💖</textarea>
+                    </div>
+
+                    <div class="ecard-form__group">
+                        <label class="ecard-form__label" for="ecard-from">From</label>
+                        <input class="ecard-form__input" type="text" id="ecard-from" placeholder="Your name"
+                            value="Your Love">
+                    </div>
+
+                    <div class="ecard-form__group">
+                        <label class="ecard-form__label" for="ecard-color">Background Color</label>
+                        <select class="ecard-form__select" id="ecard-color">
+                            <option value="pink">Romantic Pink 💕</option>
+                            <option value="lavender">Soft Lavender 💜</option>
+                            <option value="peach">Peachy 🍑</option>
+                            <option value="gold">Golden 🌟</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn--primary" id="ecard-download">
+                        Download E-Card 📥
+                    </button>
+                </form>
+
+                <div class="ecard-preview" id="ecard-preview">
+                    <p class="ecard-preview__to">To: Mindu 💕</p>
+                    <p class="ecard-preview__message">I love you more than words can say! 💖</p>
+                    <p class="ecard-preview__from">— Your Love</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing Section -->
+        <section class="extras__section" aria-labelledby="share-title">
+            <h2 class="extras__section-title" id="share-title">💕 Share This Moment 💕</h2>
+
+            <div class="share-buttons">
+                <a href="https://wa.me/?text=💕%20I%20created%20something%20special%20for%20the%20love%20of%20my%20life!%20Check%20it%20out!%20💖"
+                    target="_blank" rel="noopener noreferrer" class="share-btn share-btn--whatsapp">
+                    📱 WhatsApp
+                </a>
+
+                <a href="https://twitter.com/intent/tweet?text=I%20just%20said%20YES%20to%20forever!%20💍💕%20%23ValentinesDay%20%23SheSaidYes"
+                    target="_blank" rel="noopener noreferrer" class="share-btn share-btn--twitter">
+                    🐦 Twitter
+                </a>
+
+                <a href="https://t.me/share/url?url=https://example.com&text=💍%20The%20most%20romantic%20proposal%20ever!%20💕✨"
+                    target="_blank" rel="noopener noreferrer" class="share-btn share-btn--telegram">
+                    ✈️ Telegram
+                </a>
+
+                <button class="share-btn share-btn--copy" data-share="copy">
+                    📋 Copy Link
+                </button>
+            </div>
+        </section>
+
+        <!-- Love Calculator Section -->
+        <section class="extras__section" aria-labelledby="calculator-title">
+            <h2 class="extras__section-title" id="calculator-title">💕 How Much Do We Love Each Other? 💕</h2>
+
+            <div class="love-calculator glass-panel">
+                <div class="love-calculator__inputs">
+                    <input type="text" value="You" placeholder="Your name" aria-label="First name">
+                    <span class="love-calculator__heart">💕</span>
+                    <input type="text" value="Mindu" placeholder="Their name" aria-label="Second name">
+                </div>
+
+                <button class="btn btn--primary" id="love-calculate">
+                    Calculate Love! 💖
+                </button>
+
+                <p class="love-calculator__result" id="love-result"></p>
+            </div>
+        </section>
+
+        <!-- Romantic Quotes Carousel -->
+        <section class="extras__section" aria-labelledby="quotes-title">
+            <h2 class="extras__section-title" id="quotes-title">💕 Words of Love 💕</h2>
+
+            <div class="quotes-carousel glass-panel">
+                <p class="quotes-carousel__quote active">
+                    💕 "You are my today and all of my tomorrows."
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "In you, I've found the love of my life and my closest, truest friend."
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "Every love story is beautiful, but ours is my favorite."
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "I choose you. And I'll choose you over and over. Without pause, without doubt."
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "You are my sun, my moon, and all my stars." — E.E. Cummings
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "Being deeply loved by someone gives you strength, while loving someone deeply gives you
+                    courage." — Lao Tzu
+                </p>
+                <p class="quotes-carousel__quote">
+                    💕 "I have found the one whom my soul loves."
+                </p>
+
+                <div class="quotes-carousel__dots">
+                    <span class="quotes-carousel__dot active" data-index="0"></span>
+                    <span class="quotes-carousel__dot" data-index="1"></span>
+                    <span class="quotes-carousel__dot" data-index="2"></span>
+                    <span class="quotes-carousel__dot" data-index="3"></span>
+                    <span class="quotes-carousel__dot" data-index="4"></span>
+                    <span class="quotes-carousel__dot" data-index="5"></span>
+                    <span class="quotes-carousel__dot" data-index="6"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="intro.html" class="nav__link">Home</a>
+        <a href="proposal.html" class="nav__link">Proposal</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="extras.html" class="nav__link active" aria-current="page">Extras</a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

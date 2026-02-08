@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special romantic proposal - Will you be my wife, Mindu?">
+    <meta name="theme-color" content="#ffd1dc">
+
+    <!-- Open Graph / Social Share -->
+    <meta property="og:title" content="Will You Be My Wife, Mindu? 💍💖">
+    <meta property="og:description" content="A special romantic proposal just for you...">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/ring.png">
+
+    <title>💍 Will You Be My Wife, Mindu? 💖</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- No-JS Class Removal -->
+    <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+
+<body>
+    <!-- Skip to Content -->
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <!-- Header with Controls -->
+    <header class="header" role="banner">
+        <button class="header__toggle" id="sound-toggle" aria-label="Toggle sound effects" aria-pressed="false">
+            🔇 Sound
+        </button>
+        <button class="header__toggle" id="motion-toggle" aria-label="Toggle reduced motion" aria-pressed="true">
+            ✨ Motion
+        </button>
+    </header>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Main Content -->
+    <main id="main" class="page-wrapper">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <h1 class="hero__title" id="hero-title">
+                    💍 Will You Be My Wife, <span class="text-script">Mindu</span>? 💍
+                </h1>
+                <p class="hero__subtitle">
+                    Choose wisely... but we both know what your heart says 😏💕
+                </p>
+
+                <div class="hero__buttons" role="group" aria-label="Response options">
+                    <button class="btn btn--yes btn--large" id="yes-btn" aria-describedby="yes-desc">
+                        YES! 💍 Of course!
+                    </button>
+                    <span id="yes-desc" class="sr-only">Click to accept the proposal</span>
+
+                    <button class="btn btn--no btn--secondary btn--large" id="no-btn" aria-describedby="no-desc">
+                        <span class="no-text">NO 🙃</span>
+                    </button>
+                    <span id="no-desc" class="sr-only">This button might be hard to catch... try if you dare!</span>
+                </div>
+
+                <!-- Hidden hint after NO attempts -->
+                <p class="fallback-message" id="yes-hint" style="opacity: 0; transition: opacity 0.5s;">
+                    💕 Come on, Mindu... You Know You Want To 💕<br>
+                    👉 Click YES and Make Me The Happiest! 👈
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mathematical Proof Modal -->
+    <div class="modal" id="math-modal" role="dialog" aria-labelledby="math-title" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <h2 class="modal__title" id="math-title">🧮 Let's Do Some Math, Mindu! 📐</h2>
+
+            <div class="math-proof">
+                <div class="math-proof__line math-proof__line--negative" data-line="1">
+                    NO¹ = NO ✖️ <small>(negative)</small>
+                </div>
+                <div class="math-proof__line math-proof__line--positive" data-line="2">
+                    NO² = NO × NO = YES ✅ <small>(negative × negative = positive!)</small>
+                </div>
+                <div class="math-proof__line math-proof__line--negative" data-line="3">
+                    NO³ = NO × NO × NO = NO ✖️
+                </div>
+                <div class="math-proof__line math-proof__line--positive" data-line="4">
+                    NO⁴ = YES ✅
+                </div>
+                <div class="math-proof__line math-proof__line--negative" data-line="5">
+                    NO⁵ = NO ✖️
+                </div>
+                <div class="math-proof__line math-proof__line--positive" data-line="6">
+                    NO⁶ = YES ✅✅✅
+                </div>
+            </div>
+
+            <div class="math-proof__conclusion">
+                📊 Mathematical Conclusion:<br>
+                <strong>"NO" six times = YES! 💕</strong><br>
+                <small>Science doesn't lie, my love! 🔬💖</small>
+            </div>
+
+            <p style="color: var(--text-muted); margin: var(--spacing-lg) 0;">
+                😏 See? Even Math Agrees! 💕<br>
+                No matter what you say...<br>
+                No matter how many times you try to say no...<br><br>
+                🌟 <strong>You Love Me Anyway!</strong> 🌟
+            </p>
+
+            <button class="btn btn--primary modal__close-btn">I Get It! 💖</button>
+        </div>
+    </div>
+
+    <!-- Cat Modal (after Math Proof) -->
+    <div class="modal" id="cat-modal" role="dialog" aria-labelledby="cat-modal-title" aria-modal="true">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <img src="assets/images/cat-pistol.png" alt="Cute cat with a playful toy water gun" class="modal__image">
+            <h2 class="modal__title" id="cat-modal-title">Just click YES already! 😼🔫💕</h2>
+            <p style="color: var(--text-muted); margin-bottom: var(--spacing-lg);">
+                Come on, you know you want to! 💕<br>
+                The cat insists! 🐱
+            </p>
+            <button class="btn btn--primary modal__close-btn">Okay, Okay! 💗</button>
+        </div>
+    </div>
+
+    <!-- Celebration Screen -->
+    <div class="celebration" id="celebration" role="dialog" aria-labelledby="celebration-title" aria-modal="true">
+        <img src="assets/images/ring.png" alt="Beautiful engagement ring" class="celebration__ring">
+
+        <div class="celebration__messages">
+            <p class="celebration__text">💕 Mindu... 💕</p>
+            <p class="celebration__text">Whether you tried to say no...</p>
+            <p class="celebration__text">or ran away from that button... 😅</p>
+            <p class="celebration__text">Whether you like it or not... 😏</p>
+            <p class="celebration__text celebration__text--highlight">
+                🌟 I'm gonna marry you 💍 🌟
+            </p>
+            <p class="celebration__text celebration__text--highlight">
+                ✨ You just made me the HAPPIEST person alive! ✨
+            </p>
+            <p class="celebration__text">Because you're my everything 💖</p>
+            <p class="celebration__text">My best friend, my soulmate, my forever 🌟</p>
+            <p class="celebration__text">So...</p>
+            <h2 class="celebration__text celebration__text--hero" id="celebration-title">
+                💍 YES! We're Getting Married, Mindu! 💍
+            </h2>
+        </div>
+
+        <div class="celebration__buttons">
+            <button class="btn btn--gold btn--large" id="confirm-yes-btn">
+                I SAID YES! 💍💕
+            </button>
+            <a href="gallery.html" class="btn btn--secondary btn--large">
+                See Our Gallery 📸
+            </a>
+            <a href="extras.html" class="btn btn--secondary btn--large">
+                Share This Moment 💌
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="intro.html" class="nav__link">Home</a>
+        <a href="proposal.html" class="nav__link active" aria-current="page">Proposal</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="extras.html" class="nav__link">Extras</a>
+    </nav>
+
+    <!-- No-JS Fallback -->
+    <noscript>
+        <div
+            style="text-align: center; padding: 2rem; background: white; position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="font-size: 2rem; color: #ff4d6d;">💕 For My Dearest Mindu 💕</h1>
+            <p>This website works best with JavaScript enabled for the full interactive experience!</p>
+            <p style="font-size: 1.5rem; margin-top: 1rem;"><strong>Will you marry me? 💍</strong></p>
+            <a href="mailto:you@email.com?subject=YES!"
+                style="display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: #4ade80; color: white; border-radius: 999px; text-decoration: none; font-weight: bold;">Click
+                here to say YES! 💖</a>
+        </div>
+    </noscript>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Extra celebration for confirm button
+        document.getElementById('confirm-yes-btn')?.addEventListener('click', () => {
+            alert('💖 YESSS! You just made me the happiest person alive! 💖\n\nI love you so much, Mindu! 💕');
+            // Extra confetti burst would go here
+        });
+    </script>
+</body>
+
+</html>

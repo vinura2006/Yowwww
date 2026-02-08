@@ -1,0 +1,7 @@
+# Robots.txt for Romantic Proposal Website
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+Sitemap: https://example.github.io/proposal-for-mindu/sitemap.xml

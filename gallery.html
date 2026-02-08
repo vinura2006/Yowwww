@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A gallery of love for Mindu - Our memories and special moments">
+    <meta name="theme-color" content="#ffd1dc">
+
+    <title>💕 Our Gallery - For Mindu 💕</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- No-JS Class Removal -->
+    <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+
+<body>
+    <!-- Skip to Content -->
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <!-- Header with Controls -->
+    <header class="header" role="banner">
+        <button class="header__toggle" id="sound-toggle" aria-label="Toggle sound effects" aria-pressed="false">
+            🔇 Sound
+        </button>
+        <button class="header__toggle" id="motion-toggle" aria-label="Toggle reduced motion" aria-pressed="true">
+            ✨ Motion
+        </button>
+    </header>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main id="main" class="gallery">
+        <header class="gallery__header">
+            <h1 class="gallery__title">💕 A Gallery For You, Mindu 💕</h1>
+            <p class="gallery__subtitle">Every picture tells our story 📸✨</p>
+        </header>
+
+        <div class="gallery__grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery__item" tabindex="0" role="button" aria-label="View kissing cats image 1">
+                <img src="assets/images/kissing-cats-1.png" alt="Two cute cats sharing a sweet kiss" loading="lazy">
+                <div class="gallery__item-overlay">
+                    <span class="gallery__item-caption">Just like us 💕</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery__item" tabindex="0" role="button" aria-label="View kissing cats image 2">
+                <img src="assets/images/kissing-cats-2.png" alt="Adorable cats hugging with hearts" loading="lazy">
+                <div class="gallery__item-overlay">
+                    <span class="gallery__item-caption">Forever yours 💖</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery__item" tabindex="0" role="button" aria-label="View engagement ring">
+                <img src="assets/images/ring.png" alt="Beautiful gold engagement ring with diamond" loading="lazy">
+                <div class="gallery__item-overlay">
+                    <span class="gallery__item-caption">For you, my love 💍</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery__item" tabindex="0" role="button" aria-label="View cute cat">
+                <img src="assets/images/cat-pistol.png" alt="Playful kawaii cat" loading="lazy">
+                <div class="gallery__item-overlay">
+                    <span class="gallery__item-caption">Say YES! 😼💕</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery__item" tabindex="0" role="button" aria-label="View heart pattern">
+                <img src="assets/images/heart-pattern.png" alt="Beautiful heart pattern" loading="lazy">
+                <div class="gallery__item-overlay">
+                    <span class="gallery__item-caption">My heart is yours 💗</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 - Placeholder with message -->
+            <div class="gallery__item gallery__item--message"
+                style="background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary)); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; padding: var(--spacing-lg);">
+                    <p style="font-family: var(--font-script); font-size: var(--fs-2xl); color: var(--accent-primary);">
+                        More memories<br>coming soon...
+                    </p>
+                    <p style="font-size: var(--fs-sm); color: var(--text-muted); margin-top: var(--spacing-md);">
+                        Our story is just beginning 💕
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox__close" aria-label="Close image viewer">×</button>
+        <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">‹</button>
+        <button class="lightbox__nav lightbox__nav--next" aria-label="Next image">›</button>
+        <img class="lightbox__image" src="" alt="">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="intro.html" class="nav__link">Home</a>
+        <a href="proposal.html" class="nav__link">Proposal</a>
+        <a href="gallery.html" class="nav__link active" aria-current="page">Gallery</a>
+        <a href="extras.html" class="nav__link">Extras</a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
